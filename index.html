@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Texture Pack Hue Changer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Minecraft Texture Pack Hue Changer</h1>
+    </header>
+    <main>
+        <section id="upload-section">
+            <h2>Upload Your Texture Pack</h2>
+            <input type="file" id="fileInput" accept=".zip">
+        </section>
+        <section id="options-section">
+            <h2>Select Items to Modify</h2>
+            <div id="categories">
+                <button class="category-tab" data-category="all">All</button>
+                <button class="category-tab" data-category="icons">Icons</button>
+                <button class="category-tab" data-category="widgets">Widgets</button>
+                <button class="category-tab" data-category="blocks">Blocks</button>
+                <button class="category-tab" data-category="items">Items</button>
+            </div>
+            <div id="checklist"></div>
+        </section>
+        <section id="actions-section">
+            <h2>Hue Adjustment</h2>
+            <input type="range" id="hueSlider" min="0" max="360" value="0">
+            <label for="hueSlider">Selected Hue: <span id="hueValue">0</span>°</label>
+            <input type="color" id="colorPicker">
+            <button id="processButton" disabled>Apply Hue Change</button>
+        </section>
+        <section id="download-section">
+            <h2>Download Modified Pack</h2>
+            <button id="downloadButton" disabled>Download Pack</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
